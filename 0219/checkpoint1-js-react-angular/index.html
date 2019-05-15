@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .customCol {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">My Gallery</span>
+    </nav>
+    <div class="jumbotron">
+        <a class="btn btn-primary btn-lg" href="#" role="button" id='toggle' onclick="toggleImages()">Voir moins</a>
+    </div>
+    <div class="container">
+        <div class="row" id='customContainer'>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2014/10/22/16/38/ingredients-498199__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/26/07/21/soup-1006694__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2014/10/22/16/38/ingredients-498199__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/26/07/21/soup-1006694__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2014/10/22/16/38/ingredients-498199__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/26/07/21/soup-1006694__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2014/10/22/16/38/ingredients-498199__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/26/07/21/soup-1006694__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2014/10/22/16/38/ingredients-498199__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/26/07/21/soup-1006694__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2014/10/22/16/38/ingredients-498199__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/26/07/21/soup-1006694__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2014/10/22/16/38/ingredients-498199__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/26/07/21/soup-1006694__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2014/10/22/16/38/ingredients-498199__340.jpg" />
+            </div>
+            <div class="customCol col-12 col-md-6 col-lg-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/26/07/21/soup-1006694__340.jpg" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script>
+        const images = [...document.getElementsByClassName('customCol')];
+        console.log('1', images.length)
+        const container = document.getElementById('customContainer');
+        const toggleImages = (numberpreview) => {
+            const currentImages = document.getElementsByClassName('customCol');
+            const button = document.getElementById('toggle');
+
+            console.log('2', currentImages.length)
+
+            console.log('3', currentImages.length, images.length, currentImages.length > 3 ? 3 : images.length)
+            const limit = currentImages.length > 3 ? 3 : images.length;
+            button.innerHTML=limit>3?'Voir moins':'Voir Plus'
+            container.innerHTML = "";
+            for (let i = 0; i < limit; i++) {
+                container.appendChild(images[i])
+            }
+        }
+    </script>
+</body>
+
+</html>
